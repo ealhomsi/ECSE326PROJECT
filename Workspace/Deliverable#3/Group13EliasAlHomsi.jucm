@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="thehe" created="November 3, 2018 2:40:09 PM EDT" modified="November 3, 2018 8:47:23 PM EDT" specVersion="17" urnVersion="1.27" nextGlobalID="816">
+<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="thehe" created="November 3, 2018 2:40:09 PM EDT" modified="November 3, 2018 8:47:52 PM EDT" specVersion="18" urnVersion="1.27" nextGlobalID="816">
   <ucmspec/>
   <grlspec>
     <intElements xsi:type="fm:Feature" name="MTS Customer" id="13" linksDest="27 29 32 38 103" type="Task" refs="14"/>
@@ -196,7 +196,7 @@
         <metadata name="_height" value="72"/>
         <metadata name="_width" value="153"/>
       </nodes>
-      <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef814" id="814" x="-121" y="270" succ="//@urndef/@specDiagrams.0/@connections.12" def="116">
+      <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef814" id="814" x="-113" y="268" succ="//@urndef/@specDiagrams.0/@connections.12" def="116">
         <metadata name="_height" value="82"/>
         <metadata name="_width" value="130"/>
       </nodes>
