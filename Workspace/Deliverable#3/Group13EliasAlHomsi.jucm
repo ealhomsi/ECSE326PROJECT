@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="thehe" created="November 3, 2018 2:40:09 PM EDT" modified="November 3, 2018 9:12:16 PM EDT" specVersion="28" urnVersion="1.27" nextGlobalID="910">
+<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="thehe" created="November 3, 2018 2:40:09 PM EDT" modified="November 8, 2018 5:34:33 PM EST" specVersion="32" urnVersion="1.27" nextGlobalID="910">
   <ucmspec/>
   <grlspec>
     <intElements xsi:type="fm:Feature" name="MTS Customer" id="13" linksDest="27 29 32 38 103" type="Task" refs="14"/>
@@ -70,7 +70,7 @@
     <intElements name="Goal845" id="845" type="Goal"/>
     <intElements name="access to services" id="864" linksDest="868 869 870" linksSrc="872" type="Goal" refs="865"/>
     <actors name="Train Station" id="248" contRefs="408"/>
-    <actors name="Senior Citizen" id="395" contRefs="396"/>
+    <actors name="Transportation Agency" id="395" description="A transportation Agency similar to stm" contRefs="396"/>
     <actors name="Actor397" id="397"/>
     <links xsi:type="fm:OptionalFMLink" name="Optional27" id="27" refs="//@urndef/@specDiagrams.2/@connections.0" dest="13" src="17"/>
     <links xsi:type="fm:OptionalFMLink" name="Optional29" id="29" refs="//@urndef/@specDiagrams.2/@connections.1" dest="13" src="21"/>
@@ -672,7 +672,7 @@
       </connections>
       <connections xsi:type="grl:LinkRef" source="814" target="773" link="815"/>
     </specDiagrams>
-    <specDiagrams xsi:type="grl:GRLGraph" name="Senior Citizen" id="385" description="Martha like to take things slow. Please refer to the persona description in the previous iterations.&#xD;&#xA;&#xD;&#xA;Created By: Elias AL Homsi">
+    <specDiagrams xsi:type="grl:GRLGraph" name="Transportation Agency" id="385" description="Transportation Agency like stm&#xD;&#xA;&#xD;&#xA;Created By: Elias AL Homsi">
       <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef390" id="390" x="514" y="178" contRef="396" pred="//@urndef/@specDiagrams.4/@connections.2" def="389">
         <metadata name="_height" value="52"/>
         <metadata name="_width" value="110"/>
@@ -729,7 +729,7 @@
         <label deltaX="-33" deltaY="-31"/>
       </connections>
     </specDiagrams>
-    <specDiagrams xsi:type="grl:GRLGraph" name="Senior Citizen Detailed Goals minimize cost" id="465" description="Goals of Senior Citizen in full details&#xD;&#xA;Creator: Elias Al Homsi">
+    <specDiagrams xsi:type="grl:GRLGraph" name="Transportation Agency Detailed Goals minimize cost" id="465" description="Goals of Senior Citizen in full details&#xD;&#xA;Creator: Elias Al Homsi">
       <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef573" id="573" x="583" y="22" pred="//@urndef/@specDiagrams.5/@connections.3 //@urndef/@specDiagrams.5/@connections.4 //@urndef/@specDiagrams.5/@connections.5" def="389">
         <metadata name="_height" value="70"/>
         <metadata name="_width" value="130"/>
