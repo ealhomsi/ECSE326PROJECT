@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:ucm.map="http:///ucm/map.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="thehe" created="November 3, 2018 2:40:09 PM EDT" modified="November 9, 2018 6:44:11 PM EST" specVersion="16" urnVersion="1.27" nextGlobalID="993">
+<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:ucm.map="http:///ucm/map.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="thehe" created="November 3, 2018 2:40:09 PM EDT" modified="November 9, 2018 6:54:19 PM EST" specVersion="18" urnVersion="1.27" nextGlobalID="1002">
   <ucmspec>
     <scenarioGroups name="ScenarioGroup7" id="7">
       <scenarios name="Parent Scenario 1" id="8">
@@ -9,6 +9,8 @@
         <initializations value="true" variable="773"/>
         <initializations value="true" variable="867"/>
         <initializations value="false" variable="910"/>
+        <initializations value="true" variable="1002"/>
+        <startPoints enabled="true" startPoint="567"/>
       </scenarios>
     </scenarioGroups>
     <variables name="need_restroom" id="455"/>
@@ -17,266 +19,107 @@
     <variables name="hungry" id="773"/>
     <variables name="children_playing" id="867"/>
     <variables name="to_go" id="910"/>
+    <variables name="need_restroom_again" id="1002"/>
   </ucmspec>
   <grlspec>
-    <intElements xsi:type="fm:Feature" name="MTS Customer" id="13" linksDest="27 29 32 38 103" type="Task" refs="14">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
+    <intElements xsi:type="fm:Feature" name="MTS Customer" id="13" linksDest="27 29 32 38 103" type="Task" refs="14"/>
     <intElements xsi:type="fm:Feature" name="Travel" id="15" linksDest="122 123 124" linksSrc="32" type="Task" decompositionType="Or" refs="16">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Commodity" id="17" linksDest="139 140 165" linksSrc="27" type="Task" decompositionType="Or" refs="18">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Service" id="21" linksDest="126 127 128 129" linksSrc="29" type="Task" decompositionType="Or" refs="22">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Commute" id="34" linksDest="50 51" linksSrc="38" type="Task" refs="35">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
     </intElements>
-    <intElements xsi:type="fm:Feature" name="Restroom" id="40" linksDest="371 372 373" linksSrc="128" type="Task" decompositionType="Xor" refs="41">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
+    <intElements xsi:type="fm:Feature" name="Restroom" id="40" linksDest="371 372 373" linksSrc="128" type="Task" decompositionType="Xor" refs="41"/>
     <intElements xsi:type="fm:Feature" name="Enter Train Station" id="44" linksDest="311 312" linksSrc="50" type="Task" decompositionType="Xor" refs="45">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Leave Train Station" id="46" linksDest="63 64" linksSrc="51" type="Task" decompositionType="Xor" refs="47">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
     </intElements>
-    <intElements xsi:type="fm:Feature" name="Parking" id="53" linksSrc="127" type="Task" refs="54">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="Leave through entrance" id="55" linksSrc="63" type="Task" refs="56">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="Leave through emergency exit" id="59" linksSrc="64" type="Task" refs="60">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
+    <intElements xsi:type="fm:Feature" name="Parking" id="53" linksSrc="127" type="Task" refs="54"/>
+    <intElements xsi:type="fm:Feature" name="Leave through entrance" id="55" linksSrc="63" type="Task" refs="56"/>
+    <intElements xsi:type="fm:Feature" name="Leave through emergency exit" id="59" linksSrc="64" type="Task" refs="60"/>
     <intElements xsi:type="fm:Feature" name="Accessibility" id="67" linksDest="158 160" linksSrc="103" type="Task" decompositionType="Or" refs="68">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Announcement" id="71" linksDest="162 163" linksSrc="158" type="Task" decompositionType="Or" refs="72">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Dissability Aid" id="75" linksDest="150 151 152" linksSrc="160" type="Task" decompositionType="Or" refs="76">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
     </intElements>
-    <intElements xsi:type="fm:Feature" name="Wheel Chair" id="79" linksSrc="150" type="Task" refs="80">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="Blind Aid" id="81" linksSrc="151" type="Task" refs="82">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="Deaf Aid" id="85" linksSrc="152" type="Task" refs="86">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
+    <intElements xsi:type="fm:Feature" name="Wheel Chair" id="79" linksSrc="150" type="Task" refs="80"/>
+    <intElements xsi:type="fm:Feature" name="Blind Aid" id="81" linksSrc="151" type="Task" refs="82"/>
+    <intElements xsi:type="fm:Feature" name="Deaf Aid" id="85" linksSrc="152" type="Task" refs="86"/>
     <intElements xsi:type="fm:Feature" name="Visual Announcment" id="89" linksSrc="163" type="Task" refs="90">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
     </intElements>
-    <intElements xsi:type="fm:Feature" name="Have meal" id="93" linksDest="178 179 180" linksSrc="139" type="Task" decompositionType="Xor" refs="94">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="ATM" id="95" linksSrc="126" type="Task" refs="96">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="Public Payphone" id="99" linksSrc="129" type="Task" refs="100">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="Take Train" id="105" linksSrc="124" type="Task" refs="106">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="Buying a ticket" id="110" linksDest="239 240" linksSrc="122" type="Task" decompositionType="Xor" refs="111">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="Check Luggage" id="116" linksSrc="123" type="Task" refs="117">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="Go shopping" id="135" linksDest="211 216 213 214" linksSrc="140" type="Task" decompositionType="Or" refs="136">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="Accomodation" id="142" linksSrc="165" type="Task" refs="143">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
+    <intElements xsi:type="fm:Feature" name="Have meal" id="93" linksDest="178 179 180" linksSrc="139" type="Task" decompositionType="Xor" refs="94"/>
+    <intElements xsi:type="fm:Feature" name="ATM" id="95" linksSrc="126" type="Task" refs="96"/>
+    <intElements xsi:type="fm:Feature" name="Public Payphone" id="99" linksSrc="129" type="Task" refs="100"/>
+    <intElements xsi:type="fm:Feature" name="Take Train" id="105" linksSrc="124" type="Task" refs="106"/>
+    <intElements xsi:type="fm:Feature" name="Buying a ticket" id="110" linksDest="239 240" linksSrc="122" type="Task" decompositionType="Xor" refs="111"/>
+    <intElements xsi:type="fm:Feature" name="Check Luggage" id="116" linksSrc="123" type="Task" refs="117"/>
+    <intElements xsi:type="fm:Feature" name="Go shopping" id="135" linksDest="211 216 213 214" linksSrc="140" type="Task" decompositionType="Or" refs="136"/>
+    <intElements xsi:type="fm:Feature" name="Accomodation" id="142" linksSrc="165" type="Task" refs="143"/>
     <intElements xsi:type="fm:Feature" name="Sound Announcement" id="154" linksSrc="162" type="Task" refs="155">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
     </intElements>
-    <intElements xsi:type="fm:Feature" name="Fast food" id="168" linksDest="355 356 358" linksSrc="178" type="Task" decompositionType="Xor" refs="169">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="Restaurant" id="170" linksSrc="179" type="Task" refs="171">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="Vending machine" id="174" linksSrc="180" type="Task" refs="175">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="Daily ticket" id="182" linksSrc="224" type="Task" refs="183">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="Monthly ticket" id="184" linksSrc="225" type="Task" refs="185">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="BiMonthly ticket" id="186" linksSrc="226" type="Task" refs="187">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="Convenience Store" id="199" linksSrc="211" type="Task" refs="200">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="Drug store" id="201" linksSrc="216" type="Task" refs="202">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="Clothing store" id="203" linksSrc="213" type="Task" refs="204">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="Luggage Store" id="207" linksSrc="214" type="Task" refs="208">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
+    <intElements xsi:type="fm:Feature" name="Fast food" id="168" linksDest="355 356 358" linksSrc="178" type="Task" decompositionType="Xor" refs="169"/>
+    <intElements xsi:type="fm:Feature" name="Restaurant" id="170" linksSrc="179" type="Task" refs="171"/>
+    <intElements xsi:type="fm:Feature" name="Vending machine" id="174" linksSrc="180" type="Task" refs="175"/>
+    <intElements xsi:type="fm:Feature" name="Daily ticket" id="182" linksSrc="224" type="Task" refs="183"/>
+    <intElements xsi:type="fm:Feature" name="Monthly ticket" id="184" linksSrc="225" type="Task" refs="185"/>
+    <intElements xsi:type="fm:Feature" name="BiMonthly ticket" id="186" linksSrc="226" type="Task" refs="187"/>
+    <intElements xsi:type="fm:Feature" name="Convenience Store" id="199" linksSrc="211" type="Task" refs="200"/>
+    <intElements xsi:type="fm:Feature" name="Drug store" id="201" linksSrc="216" type="Task" refs="202"/>
+    <intElements xsi:type="fm:Feature" name="Clothing store" id="203" linksSrc="213" type="Task" refs="204"/>
+    <intElements xsi:type="fm:Feature" name="Luggage Store" id="207" linksSrc="214" type="Task" refs="208"/>
     <intElements xsi:type="fm:Feature" name="Frequency" id="218" linksDest="224 225 226" linksSrc="239" type="Task" decompositionType="Xor" refs="219">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Travel Class" id="220" linksDest="236 237" linksSrc="240" type="Task" decompositionType="Xor" refs="221">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
     </intElements>
-    <intElements xsi:type="fm:Feature" name="Economy Class" id="228" linksSrc="236" type="Task" refs="229">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="Business Class" id="230" linksSrc="237" type="Task" refs="231">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements name="Softgoal275" id="275">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements name="Softgoal287" id="287">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="Enter through entrance" id="298" linksSrc="311" type="Task" refs="299">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="Enter through evalator" id="306" linksSrc="312" type="Task" refs="307">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="Take out" id="345" linksSrc="355" type="Task" refs="346">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="Stay in" id="347" linksSrc="356" type="Task" refs="348">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
+    <intElements xsi:type="fm:Feature" name="Economy Class" id="228" linksSrc="236" type="Task" refs="229"/>
+    <intElements xsi:type="fm:Feature" name="Business Class" id="230" linksSrc="237" type="Task" refs="231"/>
+    <intElements name="Softgoal275" id="275"/>
+    <intElements name="Softgoal287" id="287"/>
+    <intElements xsi:type="fm:Feature" name="Enter through entrance" id="298" linksSrc="311" type="Task" refs="299"/>
+    <intElements xsi:type="fm:Feature" name="Enter through evalator" id="306" linksSrc="312" type="Task" refs="307"/>
+    <intElements xsi:type="fm:Feature" name="Take out" id="345" linksSrc="355" type="Task" refs="346"/>
+    <intElements xsi:type="fm:Feature" name="Stay in" id="347" linksSrc="356" type="Task" refs="348"/>
     <intElements xsi:type="fm:Feature" name="Kid playground" id="351" linksSrc="358" type="Task" refs="352">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
     </intElements>
-    <intElements xsi:type="fm:Feature" name="Male room" id="360" linksSrc="371" type="Task" refs="361">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="Female room" id="362" linksSrc="372" type="Task" refs="363">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements xsi:type="fm:Feature" name="Handicap/Baby changing room" id="364" linksSrc="373" type="Task" refs="365">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
-    </intElements>
-    <intElements name="Recognition" id="509" linksDest="559 564" type="Goal" refs="510">
-      <metadata name="_numEval" value="21"/>
-      <metadata name="_qualEval" value="WeaklySatisfied"/>
-    </intElements>
-    <intElements name="Approval" id="511" linksDest="552 561" type="Goal" refs="512">
-      <metadata name="_numEval" value="43"/>
-      <metadata name="_qualEval" value="WeaklySatisfied"/>
-    </intElements>
-    <intElements name="Profit" id="513" linksDest="539 541" type="Goal" refs="514">
-      <metadata name="_numEval" value="87"/>
-      <metadata name="_qualEval" value="WeaklySatisfied"/>
-    </intElements>
+    <intElements xsi:type="fm:Feature" name="Male room" id="360" linksSrc="371" type="Task" refs="361"/>
+    <intElements xsi:type="fm:Feature" name="Female room" id="362" linksSrc="372" type="Task" refs="363"/>
+    <intElements xsi:type="fm:Feature" name="Handicap/Baby changing room" id="364" linksSrc="373" type="Task" refs="365"/>
+    <intElements name="Recognition" id="509" linksDest="559 564" type="Goal" refs="510"/>
+    <intElements name="Approval" id="511" linksDest="552 561" type="Goal" refs="512"/>
+    <intElements name="Profit" id="513" linksDest="539 541" type="Goal" refs="514"/>
     <intElements name="Restaurant near entrance" id="517" linksSrc="554" type="Task" refs="518">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
       <metadata name="_addAggregate" value="disable"/>
     </intElements>
     <intElements name="Food delivery to restaurant" id="521" linksSrc="536" type="Task" refs="522">
-      <metadata name="_numEval" value="75"/>
-      <metadata name="_qualEval" value="WeaklySatisfied"/>
       <metadata name="_addAggregate" value="disable"/>
     </intElements>
     <intElements name="Restaurant service" id="525" linksSrc="537 539 556" type="Task" refs="526">
-      <metadata name="_numEval" value="100"/>
-      <metadata name="_qualEval" value="Satisfied"/>
       <metadata name="_addAggregate" value="disable"/>
     </intElements>
     <intElements name="Good Service" id="532" linksDest="536 537" linksSrc="541 552 564" type="Ressource" refs="533">
-      <metadata name="_numEval" value="87"/>
-      <metadata name="_qualEval" value="WeaklySatisfied"/>
       <metadata name="_addAggregate" value="disable"/>
     </intElements>
     <intElements name="Restaurant visible to customers" id="543" linksDest="554 556 562" linksSrc="559" type="Ressource" refs="544">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
       <metadata name="_addAggregate" value="disable"/>
     </intElements>
     <intElements name="Advertisement" id="547" linksSrc="561 562" type="Task" refs="548">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
       <metadata name="_addAggregate" value="disable"/>
     </intElements>
     <actors name="Restaurant Manager" id="503" contRefs="504">
@@ -390,11 +233,11 @@
   </grlspec>
   <urndef>
     <responsibilities name="Open door" id="588" respRefs="589"/>
-    <responsibilities name="Take restroom" id="758" respRefs="759 955"/>
+    <responsibilities name="Take restroom" id="758" description="" expression="" respRefs="759 955"/>
     <responsibilities name="Playing" id="816" description="" expression="children_playing = false;" respRefs="817"/>
     <responsibilities name="Stay in" id="875" description="" expression="hungry = false;" respRefs="876"/>
     <responsibilities name="To go" id="911" description="" expression="hungry = false;" respRefs="912"/>
-    <responsibilities name="Get the train" id="990" respRefs="991"/>
+    <responsibilities name="Get the train" id="990" description="" expression="need_restroom = need_restroom_again;" respRefs="991"/>
     <specDiagrams xsi:type="fm:FeatureDiagram" name="Customer Diagram" id="4">
       <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef14" id="14" x="2261" y="80" pred="//@urndef/@specDiagrams.0/@connections.0 //@urndef/@specDiagrams.0/@connections.1 //@urndef/@specDiagrams.0/@connections.2 //@urndef/@specDiagrams.0/@connections.3 //@urndef/@specDiagrams.0/@connections.8" def="13">
         <metadata name="_height" value="60"/>
@@ -743,13 +586,13 @@
       </connections>
     </specDiagrams>
     <specDiagrams xsi:type="ucm.map:UCMmap" name="Parent - Root" id="566">
-      <nodes xsi:type="ucm.map:StartPoint" name="Enter TS" id="567" x="192" y="314" succ="//@urndef/@specDiagrams.2/@connections.0">
-        <metadata name="_hits" value="0"/>
+      <nodes xsi:type="ucm.map:StartPoint" name="Enter TS" id="567" x="192" y="314" succ="//@urndef/@specDiagrams.2/@connections.0" scenarioStartPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@startPoints.0">
+        <metadata name="_hits" value="1"/>
         <label/>
         <precondition deltaX="40" deltaY="-17" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:Stub" name="Enter Entrance" id="574" x="345" y="314" succ="//@urndef/@specDiagrams.2/@connections.1" pred="//@urndef/@specDiagrams.2/@connections.0">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
         <label/>
         <bindings plugin="580">
           <in startPoint="581" stubEntry="//@urndef/@specDiagrams.2/@connections.0"/>
@@ -758,10 +601,10 @@
         </bindings>
       </nodes>
       <nodes xsi:type="ucm.map:OrFork" name="OrFork699" id="699" x="776" y="318" contRef="687" succ="//@urndef/@specDiagrams.2/@connections.2 //@urndef/@specDiagrams.2/@connections.3 //@urndef/@specDiagrams.2/@connections.4" pred="//@urndef/@specDiagrams.2/@connections.10">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="2"/>
       </nodes>
       <nodes xsi:type="ucm.map:OrJoin" name="OrJoin748" id="748" x="550" y="316" contRef="687" succ="//@urndef/@specDiagrams.2/@connections.5" pred="//@urndef/@specDiagrams.2/@connections.1 //@urndef/@specDiagrams.2/@connections.8 //@urndef/@specDiagrams.2/@connections.12">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="2"/>
       </nodes>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef759" id="759" x="663" y="213" contRef="687" succ="//@urndef/@specDiagrams.2/@connections.6" pred="//@urndef/@specDiagrams.2/@connections.7" respDef="758">
         <metadata name="_hits" value="0"/>
@@ -774,20 +617,25 @@
         <metadata name="_hits" value="0"/>
       </nodes>
       <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow770" id="770" x="784" y="402" contRef="687" succ="//@urndef/@specDiagrams.2/@connections.9" pred="//@urndef/@specDiagrams.2/@connections.4">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
       </nodes>
       <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow771" id="771" x="671" y="318" contRef="687" succ="//@urndef/@specDiagrams.2/@connections.10" pred="//@urndef/@specDiagrams.2/@connections.5">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="2"/>
       </nodes>
       <nodes xsi:type="ucm.map:Stub" name="Have meal" id="774" x="666" y="427" contRef="687" succ="//@urndef/@specDiagrams.2/@connections.11" pred="//@urndef/@specDiagrams.2/@connections.9">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
         <label/>
+        <bindings plugin="778">
+          <in startPoint="779" stubEntry="//@urndef/@specDiagrams.2/@connections.9"/>
+          <out endPoint="781" stubExit="//@urndef/@specDiagrams.2/@connections.11"/>
+          <precondition label="" expression="true"/>
+        </bindings>
       </nodes>
       <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow776" id="776" x="560" y="410" contRef="687" succ="//@urndef/@specDiagrams.2/@connections.12" pred="//@urndef/@specDiagrams.2/@connections.11">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
       </nodes>
       <nodes xsi:type="ucm.map:EndPoint" name="Leave TS" id="958" x="1590" y="316" pred="//@urndef/@specDiagrams.2/@connections.18">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
@@ -795,18 +643,23 @@
         <metadata name="_hits" value="0"/>
       </nodes>
       <nodes xsi:type="ucm.map:OrFork" name="OrFork699" id="950" x="1399" y="319" contRef="960" succ="//@urndef/@specDiagrams.2/@connections.17 //@urndef/@specDiagrams.2/@connections.18 //@urndef/@specDiagrams.2/@connections.13" pred="//@urndef/@specDiagrams.2/@connections.22">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
       </nodes>
       <nodes xsi:type="ucm.map:Stub" name="Have meal" id="948" x="1275" y="428" contRef="960" succ="//@urndef/@specDiagrams.2/@connections.20" pred="//@urndef/@specDiagrams.2/@connections.23">
         <metadata name="_hits" value="0"/>
         <label/>
+        <bindings plugin="778">
+          <in startPoint="779" stubEntry="//@urndef/@specDiagrams.2/@connections.23"/>
+          <out endPoint="781" stubExit="//@urndef/@specDiagrams.2/@connections.20"/>
+          <precondition label="" expression="true"/>
+        </bindings>
       </nodes>
       <nodes xsi:type="ucm.map:OrJoin" name="OrJoin748" id="952" x="1156" y="317" contRef="960" succ="//@urndef/@specDiagrams.2/@connections.16" pred="//@urndef/@specDiagrams.2/@connections.24 //@urndef/@specDiagrams.2/@connections.15 //@urndef/@specDiagrams.2/@connections.19">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
       </nodes>
-      <nodes xsi:type="ucm.map:RespRef" name="RespRef759" id="955" x="1272" y="214" contRef="959" succ="//@urndef/@specDiagrams.2/@connections.14" pred="//@urndef/@specDiagrams.2/@connections.21" respDef="758">
+      <nodes xsi:type="ucm.map:RespRef" name="RespRef759" id="955" x="1265" y="213" contRef="959" succ="//@urndef/@specDiagrams.2/@connections.14" pred="//@urndef/@specDiagrams.2/@connections.21" respDef="758">
         <metadata name="_hits" value="0"/>
-        <label/>
+        <label deltaX="-7" deltaY="4"/>
       </nodes>
       <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow769" id="954" x="1163" y="213" contRef="960" succ="//@urndef/@specDiagrams.2/@connections.15" pred="//@urndef/@specDiagrams.2/@connections.14">
         <metadata name="_hits" value="0"/>
@@ -814,15 +667,18 @@
       <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow966" id="966" x="1392" y="215" contRef="960" succ="//@urndef/@specDiagrams.2/@connections.21" pred="//@urndef/@specDiagrams.2/@connections.13">
         <metadata name="_hits" value="0"/>
       </nodes>
-      <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow968" id="968" x="1359" y="319" contRef="960" succ="//@urndef/@specDiagrams.2/@connections.22" pred="//@urndef/@specDiagrams.2/@connections.16">
-        <metadata name="_hits" value="0"/>
+      <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow968" id="968" x="1359" y="319" contRef="960" succ="//@urndef/@specDiagrams.2/@connections.22" pred="//@urndef/@specDiagrams.2/@connections.25">
+        <metadata name="_hits" value="1"/>
       </nodes>
       <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow979" id="979" x="1389" y="409" contRef="960" succ="//@urndef/@specDiagrams.2/@connections.23" pred="//@urndef/@specDiagrams.2/@connections.17">
         <metadata name="_hits" value="0"/>
       </nodes>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef991" id="991" x="995" y="324" contRef="982" succ="//@urndef/@specDiagrams.2/@connections.24" pred="//@urndef/@specDiagrams.2/@connections.2" respDef="990">
-        <metadata name="_hits" value="0"/>
-        <label/>
+        <metadata name="_hits" value="1"/>
+        <label deltaY="-46"/>
+      </nodes>
+      <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow994" id="994" x="1235" y="319" contRef="960" succ="//@urndef/@specDiagrams.2/@connections.25" pred="//@urndef/@specDiagrams.2/@connections.16">
+        <metadata name="_hits" value="1"/>
       </nodes>
       <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef577" id="577" x="257" y="255" width="182" height="107" contDef="390">
         <label/>
@@ -833,10 +689,10 @@
       <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef763" id="763" x="604" y="160" width="127" height="97" contDef="762" parent="687">
         <label deltaX="69" deltaY="6"/>
       </contRefs>
-      <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef959" id="959" x="1213" y="161" width="127" height="97" contDef="762" nodes="955" parent="960">
+      <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef959" id="959" x="1206" y="160" width="127" height="97" contDef="762" nodes="955" parent="960">
         <label/>
       </contRefs>
-      <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef960" id="960" x="1111" y="63" width="331" height="527" contDef="686" nodes="950 948 954 952 966 968 979" children="959">
+      <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef960" id="960" x="1111" y="63" width="331" height="527" contDef="686" nodes="950 948 954 952 966 968 979 994" children="959">
         <label/>
       </contRefs>
       <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef982" id="982" x="920" y="235" width="150" height="164" contDef="981" nodes="991">
@@ -845,10 +701,10 @@
       <connections xsi:type="ucm.map:NodeConnection" source="567" target="574" inBindings="//@urndef/@specDiagrams.2/@nodes.1/@bindings.0/@in.0"/>
       <connections xsi:type="ucm.map:NodeConnection" source="574" target="748" outBindings="//@urndef/@specDiagrams.2/@nodes.1/@bindings.0/@out.0"/>
       <connections xsi:type="ucm.map:NodeConnection" source="699" target="991">
-        <condition deltaX="49" deltaY="-8" label="take train" expression="need_restroom == false &amp;&amp; hungry == false" description=""/>
+        <condition deltaX="80" deltaY="-7" label="take train" expression="need_restroom == false &amp;&amp; hungry == false" description=""/>
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="699" target="768">
-        <condition label="children need restroom" expression="need_restroom == true" description=""/>
+        <condition deltaX="2" deltaY="-23" label="children need restroom" expression="need_restroom == true" description=""/>
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="699" target="770">
         <condition deltaX="-7" deltaY="11" label="go to restaurant" expression="hungry == true" description=""/>
@@ -857,61 +713,62 @@
       <connections xsi:type="ucm.map:NodeConnection" source="759" target="769"/>
       <connections xsi:type="ucm.map:NodeConnection" source="768" target="759"/>
       <connections xsi:type="ucm.map:NodeConnection" source="769" target="748"/>
-      <connections xsi:type="ucm.map:NodeConnection" source="770" target="774"/>
+      <connections xsi:type="ucm.map:NodeConnection" source="770" target="774" inBindings="//@urndef/@specDiagrams.2/@nodes.9/@bindings.0/@in.0"/>
       <connections xsi:type="ucm.map:NodeConnection" source="771" target="699"/>
-      <connections xsi:type="ucm.map:NodeConnection" source="774" target="776"/>
+      <connections xsi:type="ucm.map:NodeConnection" source="774" target="776" outBindings="//@urndef/@specDiagrams.2/@nodes.9/@bindings.0/@out.0"/>
       <connections xsi:type="ucm.map:NodeConnection" source="776" target="748"/>
       <connections xsi:type="ucm.map:NodeConnection" source="950" target="966">
         <condition deltaX="-10" deltaY="30" label="children need restroom" expression="need_restroom == true" description=""/>
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="955" target="954"/>
       <connections xsi:type="ucm.map:NodeConnection" source="954" target="952"/>
-      <connections xsi:type="ucm.map:NodeConnection" source="952" target="968"/>
+      <connections xsi:type="ucm.map:NodeConnection" source="952" target="994"/>
       <connections xsi:type="ucm.map:NodeConnection" source="950" target="979">
         <condition deltaX="-17" deltaY="15" label="go to restaurant" expression="hungry == true" description=""/>
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="950" target="958">
-        <condition deltaX="49" deltaY="39" label="take train" expression="need_restroom == false &amp;&amp; hungry == false" description=""/>
+        <condition deltaX="78" deltaY="35" label="leave train" expression="need_restroom == false &amp;&amp; hungry == false" description=""/>
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="957" target="952"/>
-      <connections xsi:type="ucm.map:NodeConnection" source="948" target="957"/>
+      <connections xsi:type="ucm.map:NodeConnection" source="948" target="957" outBindings="//@urndef/@specDiagrams.2/@nodes.14/@bindings.0/@out.0"/>
       <connections xsi:type="ucm.map:NodeConnection" source="966" target="955"/>
       <connections xsi:type="ucm.map:NodeConnection" source="968" target="950"/>
-      <connections xsi:type="ucm.map:NodeConnection" source="979" target="948"/>
+      <connections xsi:type="ucm.map:NodeConnection" source="979" target="948" inBindings="//@urndef/@specDiagrams.2/@nodes.14/@bindings.0/@in.0"/>
       <connections xsi:type="ucm.map:NodeConnection" source="991" target="952"/>
+      <connections xsi:type="ucm.map:NodeConnection" source="994" target="968"/>
     </specDiagrams>
     <specDiagrams xsi:type="ucm.map:UCMmap" name="Parent - Enter TS" id="580" parentStub="//@urndef/@specDiagrams.2/@nodes.1/@bindings.0">
       <nodes xsi:type="ucm.map:StartPoint" name="Enter TS" id="581" x="121" y="330" succ="//@urndef/@specDiagrams.3/@connections.0" inBindings="//@urndef/@specDiagrams.2/@nodes.1/@bindings.0/@in.0">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
         <label/>
         <precondition deltaX="40" deltaY="-17" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:EndPoint" name="Inside TS" id="583" x="722" y="340" pred="//@urndef/@specDiagrams.3/@connections.4" outBindings="//@urndef/@specDiagrams.2/@nodes.1/@bindings.0/@out.0">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef589" id="589" x="447" y="337" succ="//@urndef/@specDiagrams.3/@connections.1" pred="//@urndef/@specDiagrams.3/@connections.7" respDef="588">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
         <label/>
       </nodes>
       <nodes xsi:type="ucm.map:OrFork" name="OrFork600" id="600" x="198" y="333" succ="//@urndef/@specDiagrams.3/@connections.2 //@urndef/@specDiagrams.3/@connections.3" pred="//@urndef/@specDiagrams.3/@connections.0">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
       </nodes>
       <nodes xsi:type="ucm.map:OrJoin" name="OrJoin629" id="629" x="682" y="340" succ="//@urndef/@specDiagrams.3/@connections.4" pred="//@urndef/@specDiagrams.3/@connections.1 //@urndef/@specDiagrams.3/@connections.11">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
       </nodes>
       <nodes xsi:type="ucm.map:OrFork" name="OrFork632" id="632" x="275" y="451" succ="//@urndef/@specDiagrams.3/@connections.5 //@urndef/@specDiagrams.3/@connections.6" pred="//@urndef/@specDiagrams.3/@connections.10">
         <metadata name="_hits" value="0"/>
       </nodes>
       <nodes xsi:type="ucm.map:OrJoin" name="OrJoin651" id="651" x="347" y="335" succ="//@urndef/@specDiagrams.3/@connections.7" pred="//@urndef/@specDiagrams.3/@connections.9 //@urndef/@specDiagrams.3/@connections.8">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
       </nodes>
       <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow652" id="652" x="320" y="382" succ="//@urndef/@specDiagrams.3/@connections.8" pred="//@urndef/@specDiagrams.3/@connections.6">
         <metadata name="_hits" value="0"/>
       </nodes>
       <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow653" id="653" x="258" y="335" succ="//@urndef/@specDiagrams.3/@connections.9" pred="//@urndef/@specDiagrams.3/@connections.2">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
       </nodes>
       <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow655" id="655" x="210" y="401" succ="//@urndef/@specDiagrams.3/@connections.10" pred="//@urndef/@specDiagrams.3/@connections.3">
         <metadata name="_hits" value="0"/>
@@ -963,48 +820,48 @@
       <connections xsi:type="ucm.map:NodeConnection" source="664" target="673"/>
       <connections xsi:type="ucm.map:NodeConnection" source="673" target="660"/>
     </specDiagrams>
-    <specDiagrams xsi:type="ucm.map:UCMmap" name="Parent - Restaurant" id="778">
-      <nodes xsi:type="ucm.map:StartPoint" name="Enter Restaurant" id="779" x="170" y="265" contRef="789" succ="//@urndef/@specDiagrams.4/@connections.0">
-        <metadata name="_hits" value="0"/>
+    <specDiagrams xsi:type="ucm.map:UCMmap" name="Parent - Restaurant" id="778" parentStub="//@urndef/@specDiagrams.2/@nodes.9/@bindings.0 //@urndef/@specDiagrams.2/@nodes.14/@bindings.0">
+      <nodes xsi:type="ucm.map:StartPoint" name="Enter Restaurant" id="779" x="170" y="265" contRef="789" succ="//@urndef/@specDiagrams.4/@connections.0" inBindings="//@urndef/@specDiagrams.2/@nodes.9/@bindings.0/@in.0 //@urndef/@specDiagrams.2/@nodes.14/@bindings.0/@in.0">
+        <metadata name="_hits" value="1"/>
         <label/>
         <precondition deltaX="40" deltaY="-17" label="" expression="true"/>
       </nodes>
-      <nodes xsi:type="ucm.map:EndPoint" name="Leave Restaurant" id="781" x="854" y="267" contRef="789" pred="//@urndef/@specDiagrams.4/@connections.3">
-        <metadata name="_hits" value="0"/>
+      <nodes xsi:type="ucm.map:EndPoint" name="Leave Restaurant" id="781" x="854" y="267" contRef="789" pred="//@urndef/@specDiagrams.4/@connections.3" outBindings="//@urndef/@specDiagrams.2/@nodes.9/@bindings.0/@out.0 //@urndef/@specDiagrams.2/@nodes.14/@bindings.0/@out.0">
+        <metadata name="_hits" value="1"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:AndFork" name="AndFork804" id="804" x="263" y="267" contRef="789" succ="//@urndef/@specDiagrams.4/@connections.1 //@urndef/@specDiagrams.4/@connections.2" pred="//@urndef/@specDiagrams.4/@connections.0">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
       </nodes>
       <nodes xsi:type="ucm.map:AndJoin" name="AndJoin811" id="811" x="717" y="268" contRef="789" succ="//@urndef/@specDiagrams.4/@connections.3" pred="//@urndef/@specDiagrams.4/@connections.13 //@urndef/@specDiagrams.4/@connections.7">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="2"/>
       </nodes>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef817" id="817" x="580" y="417" contRef="821" succ="//@urndef/@specDiagrams.4/@connections.4" pred="//@urndef/@specDiagrams.4/@connections.9" respDef="816">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
         <label/>
       </nodes>
       <nodes xsi:type="ucm.map:OrFork" name="OrFork824" id="824" x="302" y="345" contRef="789" succ="//@urndef/@specDiagrams.4/@connections.5 //@urndef/@specDiagrams.4/@connections.6" pred="//@urndef/@specDiagrams.4/@connections.2">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
       </nodes>
       <nodes xsi:type="ucm.map:OrJoin" name="OrJoin862" id="862" x="667" y="316" contRef="789" succ="//@urndef/@specDiagrams.4/@connections.7" pred="//@urndef/@specDiagrams.4/@connections.4 //@urndef/@specDiagrams.4/@connections.8">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
       </nodes>
       <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow863" id="863" x="352" y="315" contRef="789" succ="//@urndef/@specDiagrams.4/@connections.8" pred="//@urndef/@specDiagrams.4/@connections.6">
         <metadata name="_hits" value="0"/>
       </nodes>
       <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow873" id="873" x="335" y="414" contRef="789" succ="//@urndef/@specDiagrams.4/@connections.9" pred="//@urndef/@specDiagrams.4/@connections.5">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
       </nodes>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef876" id="876" x="516" y="258" contRef="789" succ="//@urndef/@specDiagrams.4/@connections.10" pred="//@urndef/@specDiagrams.4/@connections.11" respDef="875">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
         <label deltaX="-3" deltaY="-1"/>
       </nodes>
       <nodes xsi:type="ucm.map:OrFork" name="OrFork887" id="887" x="403" y="258" contRef="789" succ="//@urndef/@specDiagrams.4/@connections.11 //@urndef/@specDiagrams.4/@connections.12" pred="//@urndef/@specDiagrams.4/@connections.1">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
       </nodes>
       <nodes xsi:type="ucm.map:OrJoin" name="OrJoin904" id="904" x="626" y="259" contRef="789" succ="//@urndef/@specDiagrams.4/@connections.13" pred="//@urndef/@specDiagrams.4/@connections.10 //@urndef/@specDiagrams.4/@connections.16">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
       </nodes>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef912" id="912" x="515" y="171" contRef="789" succ="//@urndef/@specDiagrams.4/@connections.14" pred="//@urndef/@specDiagrams.4/@connections.15" respDef="911">
         <metadata name="_hits" value="0"/>
@@ -1028,10 +885,10 @@
       <connections xsi:type="ucm.map:NodeConnection" source="811" target="781"/>
       <connections xsi:type="ucm.map:NodeConnection" source="817" target="862"/>
       <connections xsi:type="ucm.map:NodeConnection" source="824" target="873">
-        <condition deltaX="-16" deltaY="20" label="children can play" expression="children_playing == false &amp;&amp; to_go != true" description=""/>
+        <condition deltaX="-16" deltaY="20" label="children can play" expression="children_playing == true &amp;&amp; to_go != true" description=""/>
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="824" target="863">
-        <condition label="" expression="children_playing == false" description=""/>
+        <condition label="" expression="children_playing == false || to_go == true" description=""/>
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="862" target="811"/>
       <connections xsi:type="ucm.map:NodeConnection" source="863" target="862"/>
