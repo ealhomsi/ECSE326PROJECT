@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:ucm.map="http:///ucm/map.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="thehe" created="November 3, 2018 2:40:09 PM EDT" modified="November 9, 2018 6:55:08 PM EST" specVersion="19" urnVersion="1.27" nextGlobalID="1002">
+<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:ucm.map="http:///ucm/map.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="thehe" created="November 3, 2018 2:40:09 PM EDT" modified="November 9, 2018 7:51:06 PM EST" specVersion="22" urnVersion="1.27" nextGlobalID="1009">
   <ucmspec>
     <scenarioGroups name="ScenarioGroup7" id="7">
       <scenarios name="Parent Scenario 1" id="8">
-        <initializations value="false" variable="455"/>
+        <initializations value="true" variable="455"/>
         <initializations value="false" variable="676"/>
         <initializations value="false" variable="681"/>
         <initializations value="true" variable="773"/>
@@ -11,6 +11,20 @@
         <initializations value="false" variable="910"/>
         <initializations value="true" variable="1002"/>
         <startPoints enabled="true" startPoint="567"/>
+        <startPoints enabled="true" startPoint="662"/>
+        <endPoints enabled="true" mandatory="true" endPoint="958"/>
+      </scenarios>
+      <scenarios name="Parent Scenario 2" id="1005">
+        <initializations value="false" variable="455"/>
+        <initializations value="false" variable="676"/>
+        <initializations value="true" variable="681"/>
+        <initializations value="true" variable="773"/>
+        <initializations value="true" variable="867"/>
+        <initializations value="true" variable="910"/>
+        <initializations value="false" variable="1002"/>
+        <startPoints enabled="true" startPoint="567"/>
+        <startPoints enabled="true" startPoint="662"/>
+        <endPoints enabled="true" mandatory="true" endPoint="958"/>
       </scenarios>
     </scenarioGroups>
     <variables name="need_restroom" id="455"/>
@@ -110,7 +124,7 @@
     <intElements name="Food delivery to restaurant" id="521" linksSrc="536" type="Task" refs="522">
       <metadata name="_addAggregate" value="disable"/>
     </intElements>
-    <intElements name="Restaurant service" id="525" linksSrc="537 539 556" type="Task" refs="526">
+    <intElements name="Restaurant branch" id="525" linksSrc="537 539 556" type="Task" refs="526">
       <metadata name="_addAggregate" value="disable"/>
     </intElements>
     <intElements name="Good Service" id="532" linksDest="536 537" linksSrc="541 552 564" type="Ressource" refs="533">
@@ -586,7 +600,7 @@
       </connections>
     </specDiagrams>
     <specDiagrams xsi:type="ucm.map:UCMmap" name="Parent - Root" id="566">
-      <nodes xsi:type="ucm.map:StartPoint" name="Enter TS" id="567" x="192" y="314" succ="//@urndef/@specDiagrams.2/@connections.0" scenarioStartPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@startPoints.0">
+      <nodes xsi:type="ucm.map:StartPoint" name="Enter TS" id="567" x="192" y="314" succ="//@urndef/@specDiagrams.2/@connections.0" scenarioStartPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@startPoints.0 //@ucmspec/@scenarioGroups.0/@scenarios.1/@startPoints.0">
         <metadata name="_hits" value="1"/>
         <label/>
         <precondition deltaX="40" deltaY="-17" label="" expression="true"/>
@@ -634,18 +648,18 @@
       <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow776" id="776" x="560" y="410" contRef="687" succ="//@urndef/@specDiagrams.2/@connections.12" pred="//@urndef/@specDiagrams.2/@connections.11">
         <metadata name="_hits" value="1"/>
       </nodes>
-      <nodes xsi:type="ucm.map:EndPoint" name="Leave TS" id="958" x="1590" y="316" pred="//@urndef/@specDiagrams.2/@connections.18">
-        <metadata name="_hits" value="0"/>
+      <nodes xsi:type="ucm.map:EndPoint" name="Leave TS" id="958" x="1590" y="316" pred="//@urndef/@specDiagrams.2/@connections.18" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@endPoints.0 //@ucmspec/@scenarioGroups.0/@scenarios.1/@endPoints.0">
+        <metadata name="_hits" value="1"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow776" id="957" x="1169" y="411" succ="//@urndef/@specDiagrams.2/@connections.19" pred="//@urndef/@specDiagrams.2/@connections.20">
         <metadata name="_hits" value="0"/>
       </nodes>
-      <nodes xsi:type="ucm.map:OrFork" name="OrFork699" id="950" x="1399" y="319" contRef="960" succ="//@urndef/@specDiagrams.2/@connections.17 //@urndef/@specDiagrams.2/@connections.18 //@urndef/@specDiagrams.2/@connections.13" pred="//@urndef/@specDiagrams.2/@connections.22">
-        <metadata name="_hits" value="999"/>
+      <nodes xsi:type="ucm.map:OrFork" name="OrFork699" id="950" x="1399" y="319" succ="//@urndef/@specDiagrams.2/@connections.17 //@urndef/@specDiagrams.2/@connections.18 //@urndef/@specDiagrams.2/@connections.13" pred="//@urndef/@specDiagrams.2/@connections.22">
+        <metadata name="_hits" value="2"/>
       </nodes>
-      <nodes xsi:type="ucm.map:Stub" name="Have meal" id="948" x="1275" y="428" contRef="960" succ="//@urndef/@specDiagrams.2/@connections.20" pred="//@urndef/@specDiagrams.2/@connections.23">
+      <nodes xsi:type="ucm.map:Stub" name="Have meal" id="948" x="1275" y="428" succ="//@urndef/@specDiagrams.2/@connections.20" pred="//@urndef/@specDiagrams.2/@connections.23">
         <metadata name="_hits" value="0"/>
         <label/>
         <bindings plugin="778">
@@ -654,31 +668,31 @@
           <precondition label="" expression="true"/>
         </bindings>
       </nodes>
-      <nodes xsi:type="ucm.map:OrJoin" name="OrJoin748" id="952" x="1156" y="317" contRef="960" succ="//@urndef/@specDiagrams.2/@connections.16" pred="//@urndef/@specDiagrams.2/@connections.24 //@urndef/@specDiagrams.2/@connections.15 //@urndef/@specDiagrams.2/@connections.19">
-        <metadata name="_hits" value="1000"/>
+      <nodes xsi:type="ucm.map:OrJoin" name="OrJoin748" id="952" x="1156" y="317" succ="//@urndef/@specDiagrams.2/@connections.16" pred="//@urndef/@specDiagrams.2/@connections.24 //@urndef/@specDiagrams.2/@connections.15 //@urndef/@specDiagrams.2/@connections.19">
+        <metadata name="_hits" value="2"/>
       </nodes>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef759" id="955" x="1265" y="213" contRef="959" succ="//@urndef/@specDiagrams.2/@connections.14" pred="//@urndef/@specDiagrams.2/@connections.21" respDef="758">
-        <metadata name="_hits" value="999"/>
+        <metadata name="_hits" value="1"/>
         <label deltaX="-7" deltaY="4"/>
       </nodes>
-      <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow769" id="954" x="1163" y="213" contRef="960" succ="//@urndef/@specDiagrams.2/@connections.15" pred="//@urndef/@specDiagrams.2/@connections.14">
-        <metadata name="_hits" value="999"/>
+      <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow769" id="954" x="1163" y="213" succ="//@urndef/@specDiagrams.2/@connections.15" pred="//@urndef/@specDiagrams.2/@connections.14">
+        <metadata name="_hits" value="1"/>
       </nodes>
-      <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow966" id="966" x="1392" y="215" contRef="960" succ="//@urndef/@specDiagrams.2/@connections.21" pred="//@urndef/@specDiagrams.2/@connections.13">
-        <metadata name="_hits" value="999"/>
+      <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow966" id="966" x="1392" y="215" succ="//@urndef/@specDiagrams.2/@connections.21" pred="//@urndef/@specDiagrams.2/@connections.13">
+        <metadata name="_hits" value="1"/>
       </nodes>
-      <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow968" id="968" x="1359" y="319" contRef="960" succ="//@urndef/@specDiagrams.2/@connections.22" pred="//@urndef/@specDiagrams.2/@connections.25">
-        <metadata name="_hits" value="999"/>
+      <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow968" id="968" x="1359" y="319" succ="//@urndef/@specDiagrams.2/@connections.22" pred="//@urndef/@specDiagrams.2/@connections.25">
+        <metadata name="_hits" value="2"/>
       </nodes>
-      <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow979" id="979" x="1389" y="409" contRef="960" succ="//@urndef/@specDiagrams.2/@connections.23" pred="//@urndef/@specDiagrams.2/@connections.17">
+      <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow979" id="979" x="1389" y="409" succ="//@urndef/@specDiagrams.2/@connections.23" pred="//@urndef/@specDiagrams.2/@connections.17">
         <metadata name="_hits" value="0"/>
       </nodes>
-      <nodes xsi:type="ucm.map:RespRef" name="RespRef991" id="991" x="995" y="324" contRef="982" succ="//@urndef/@specDiagrams.2/@connections.24" pred="//@urndef/@specDiagrams.2/@connections.2" respDef="990">
+      <nodes xsi:type="ucm.map:RespRef" name="RespRef991" id="991" x="995" y="310" contRef="982" succ="//@urndef/@specDiagrams.2/@connections.24" pred="//@urndef/@specDiagrams.2/@connections.2" respDef="990">
         <metadata name="_hits" value="1"/>
         <label deltaY="-46"/>
       </nodes>
-      <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow994" id="994" x="1235" y="319" contRef="960" succ="//@urndef/@specDiagrams.2/@connections.25" pred="//@urndef/@specDiagrams.2/@connections.16">
-        <metadata name="_hits" value="999"/>
+      <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow994" id="994" x="1235" y="319" succ="//@urndef/@specDiagrams.2/@connections.25" pred="//@urndef/@specDiagrams.2/@connections.16">
+        <metadata name="_hits" value="2"/>
       </nodes>
       <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef577" id="577" x="257" y="255" width="182" height="107" contDef="390">
         <label/>
@@ -689,13 +703,13 @@
       <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef763" id="763" x="604" y="160" width="127" height="97" contDef="762" parent="687">
         <label deltaX="69" deltaY="6"/>
       </contRefs>
-      <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef959" id="959" x="1206" y="160" width="127" height="97" contDef="762" nodes="955" parent="960">
+      <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef959" id="959" x="1206" y="160" width="127" height="97" contDef="762" nodes="955">
         <label/>
       </contRefs>
-      <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef960" id="960" x="1111" y="63" width="331" height="527" contDef="686" nodes="950 948 954 952 966 968 979 994" children="959">
+      <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef982" id="982" x="920" y="238" width="150" height="134" contDef="981" nodes="991">
         <label/>
       </contRefs>
-      <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef982" id="982" x="920" y="235" width="150" height="164" contDef="981" nodes="991">
+      <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef1007" id="1007" x="1088" y="44" width="423" height="582" contDef="1006">
         <label/>
       </contRefs>
       <connections xsi:type="ucm.map:NodeConnection" source="567" target="574" inBindings="//@urndef/@specDiagrams.2/@nodes.1/@bindings.0/@in.0"/>
@@ -724,7 +738,7 @@
       <connections xsi:type="ucm.map:NodeConnection" source="954" target="952"/>
       <connections xsi:type="ucm.map:NodeConnection" source="952" target="994"/>
       <connections xsi:type="ucm.map:NodeConnection" source="950" target="979">
-        <condition deltaX="-17" deltaY="15" label="go to restaurant" expression="hungry == true" description=""/>
+        <condition deltaX="-9" deltaY="27" label="go to restaurant" expression="hungry == true" description=""/>
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="950" target="958">
         <condition deltaX="78" deltaY="35" label="leave train" expression="need_restroom == false &amp;&amp; hungry == false" description=""/>
@@ -780,13 +794,13 @@
         <metadata name="_hits" value="0"/>
         <label deltaX="-84" deltaY="-50"/>
       </nodes>
-      <nodes xsi:type="ucm.map:StartPoint" name="Elevator start" id="662" x="408" y="615" succ="//@urndef/@specDiagrams.3/@connections.13">
-        <metadata name="_hits" value="0"/>
+      <nodes xsi:type="ucm.map:StartPoint" name="Elevator start" id="662" x="408" y="615" succ="//@urndef/@specDiagrams.3/@connections.13" scenarioStartPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@startPoints.1 //@ucmspec/@scenarioGroups.0/@scenarios.1/@startPoints.1">
+        <metadata name="_hits" value="1"/>
         <label deltaX="3" deltaY="-62"/>
         <precondition deltaX="40" deltaY="-17" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:EndPoint" name="EndPoint664" id="664" x="407" y="447" succ="//@urndef/@specDiagrams.3/@connections.14" pred="//@urndef/@specDiagrams.3/@connections.13">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:Connect" name="Connect673" id="673" x="407" y="447" succ="//@urndef/@specDiagrams.3/@connections.15" pred="//@urndef/@specDiagrams.3/@connections.14"/>
@@ -909,11 +923,12 @@
     <components name="Inside train station" id="394"/>
     <components name="Component576" id="576"/>
     <components name="Entrance" id="592" contRefs="593"/>
-    <components name="Inside train station 2" id="686" contRefs="687 960"/>
+    <components name="Inside train station 1" id="686" contRefs="687"/>
     <components name="Handicap/Baby changing restroom" id="762" contRefs="763 959"/>
     <components name="Fast food Restaurant" id="788" contRefs="789"/>
     <components name="Kid's playground" id="820" contRefs="821"/>
     <components name="Inside the train" id="981" contRefs="982"/>
+    <components name="Inside train station 2" id="1006" contRefs="1007"/>
   </urndef>
   <metadata name="_Use0to100EvaluationRange" value="false"/>
 </urn:URNspec>
